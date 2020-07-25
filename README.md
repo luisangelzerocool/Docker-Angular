@@ -10,8 +10,8 @@
 
 # 
 
-![steps of dockerization](/screenshots/Pasosdeoperacióndedockerizacióndewebapp.jpeg)
+![steps of dockerization](/screenshots/Pasosdeoperacióndedockerizacióndewebapp.jpg)
 
 # 
 
-![steps of publish image](/screenshots/PasosdepublicacióndeimagenenDockerHub.jpeg)
+![steps of publish image](/screenshots/PasosdepublicacióndeimagenenDockerHub.jpg)
