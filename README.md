@@ -3,9 +3,9 @@ Application web developed in angular and deployed in docker
 
 **Version**
 
- Angular CLI: 9.0.7
- Node: 12.16.1
- OS: 10-Alpine (Container)
+ * Angular CLI: 9.0.7
+ * Node: 12.16.1
+ * OS: 10-Alpine (Container)
 
 ## Dockerization
 
