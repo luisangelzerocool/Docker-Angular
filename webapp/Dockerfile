@@ -1,5 +1,5 @@
 # base image 
-FROM node:10-alpine
+FROM myartifactory.com/node:10-alpine
 
 # set working directory
 WORKDIR /app
