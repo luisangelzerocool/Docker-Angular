@@ -34,7 +34,7 @@ Execute the created image
 docker run -d --name <container_name> -p <portExpose:portApp>  <image_name>
 ```
 
-To veficiate the WebApp running in the browser
+To verificate the WebApp running in the browser
 
 go to browser and copy ´ip_host:portExpose´
 
@@ -59,9 +59,9 @@ Publish image in Docker Hub
 docker push <dockerHubUser/image_name>
 ```
 
-To veficiate the image publish in Docker Hub
+To verificate the image publish in Docker Hub
 
-go to Kibana => [https://hub.docker.com/]
+go to Docker Hub => [https://hub.docker.com/]
 
 ## LICENSE
 
