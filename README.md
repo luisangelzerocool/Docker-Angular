@@ -7,7 +7,7 @@ Application web developed in angular and deployed in docker
  * Node: 12.16.1
  * OS: 10-Alpine (Container)
 
-## Dockerization
+## Image Dockerization
 
 Create the Dockerfile inside Angular WebApp
 
@@ -18,7 +18,17 @@ nano Dockerfile
 Enter to machine with Docker 
 
 ```bash
-ssh <user@ip_host> <port> -L <portExpose:ip_host:portExpose>
+ssh <user@ip_host> -p <port> -L <portExpose:ip_host:portExpose>
+```
+
+Clone or pull the repo and download the Dockerfile change
+
+´git pull´ or  ´git clone´
+
+go to route of repo and route of webapp with Dockerfile
+
+```bash
+cd /repo/webapp/
 ```
 
 Build the docker image for WebApp
@@ -39,7 +49,13 @@ To verificate the WebApp running in the browser
 go to browser and copy ´ip_host:portExpose´
 
 
-## Publish in DockerHub
+## Publish Image in DockerHub
+
+Enter to machine with Docker 
+
+```bash
+ssh <user@ip_host> -p <port>
+```
 
 Login in dockerhub 
 
