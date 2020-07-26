@@ -61,7 +61,7 @@ docker push <dockerHubUser/image_name>
 
 To verificate the image publish in Docker Hub
 
-go to Docker Hub => [https://hub.docker.com/]
+go to Docker Hub => https://hub.docker.com/
 
 ## LICENSE
 
