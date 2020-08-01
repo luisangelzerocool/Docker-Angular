@@ -1,15 +1,15 @@
 # base image 
-FROM myartifactory.com/node:10-alpine
+FROM node:10-alpine
 
 # set working directory
 WORKDIR /app
 
-LABEL   net.dcaballero.maintainer="lvanegas@nargoth.com"
-LABEL   net.dcaballero.description="Image with web app developed in angular"
-LABEL   net.dcaballero.vendor=dcaballero.net
-LABEL   net.dcaballero.copyright=dcaballero.net
-LABEL   net.dcaballero.version=1.0.0
-LABEL   net.dcaballero.project=acme
+LABEL   com.midominio.maintainer="micorreo@midominio.com"
+LABEL   com.midominio.description="Image with web app developed in angular"
+LABEL   com.midominio.vendor=midominio.com
+LABEL   com.midominio.copyright=midominio.com
+LABEL   com.midominio.version=1.0.0
+LABEL   com.midominio.project=miproject
 
 
 # add `/app/node_modules/.bin` to $PATH
