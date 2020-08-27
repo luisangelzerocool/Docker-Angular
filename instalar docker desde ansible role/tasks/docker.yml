@@ -1,0 +1,44 @@
+---
+  - name: Install Docker
+    hosts: test1
+    become: yes #Poder convertirse en usuario con privilegios
+   
+    tasks:
+      #instalo algunas caracteristicas necesarias para docker
+      - name: Install yum utils
+        yum:
+          name: yum-utils
+          state: latest
+   
+      - name: Install device-mapper-persistent-data
+        yum:
+          name: device-mapper-persistent-data
+          state: latest
+   
+      - name: Install lvm2
+        yum:
+          name: lvm2
+          state: latest
+  
+      - name: Install net-tools
+        yum:
+          name: net-tools
+          state: latest
+   
+      - name: Add Docker repo #obtengo docker desde el repo
+        get_url:
+          url: https://download.docker.com/linux/centos/docker-ce.repo
+          dest: /etc/yum.repos.d/docker-ce.repo
+   
+      - name: Install Docker #instalo el docker-ce que he descargado
+        package:
+          name: docker-ce
+          state: latest
+   
+      - name: Start Docker service #inicio el servicio de docker 
+        service:
+          name: docker
+          state: started
+          enabled: yes
+   
+  
