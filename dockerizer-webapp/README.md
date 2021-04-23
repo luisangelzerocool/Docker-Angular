@@ -1,4 +1,5 @@
-# Docker-Angular for WebApp
+# Dockerizer Web App
+
 Application web developed in angular and deployed in docker
 
 **Version**
@@ -9,102 +10,51 @@ Application web developed in angular and deployed in docker
 
 ## Image Dockerization
 
-Create the Dockerfile inside Angular WebApp
+1. Create the web app
+2. Create the `Dockerfile`
+3. Create the `.dockerignore`
+4. Enter to machine with docker 
+     ```bash
+     #simple entering
+     $ ssh <user@ip_host> -p <port>
+     # entering to machine with port-forwarding for expose an port:
+     $ ssh <user@ip_host> -p <port> -L <portExpose:ip_host:portExpose>
+     ```
+5. Copy the web app into machine with docker
 
-```bash
-cd webapp
-nano Dockerfile
-``` 
-Enter to machine with Docker 
+6. create docker build with 
+     ```bash 
+     $ docker build . -t <user/image_name:tag>
+     ```
+7. Execute the image and create container
+     ```bash 
+     $ docker run -d --name <container_name> -p <portExpose:portApp> <image_name>
+     ```
+8. open the app in your browser with: `http://<ip_host:portExpose>`
 
-```bash
-ssh <user@ip_host> -p <port> -L <portExpose:ip_host:portExpose>
-```
-
-Clone or pull the repo and download the Dockerfile change
-
-´git pull´ or  ´git clone´
-
-go to route of repo and route of webapp with Dockerfile
-
-```bash
-cd /repo/webapp/
-```
-
-Build the docker image for WebApp
-
-```bash
-docker build . -t <image_name>
-```
->Execute this command in a route with Dockerfile 
-
-Execute the created image 
-
-```bash
-docker run -d --name <container_name> -p <portExpose:portApp>  <image_name>
-```
-
-To verificate the WebApp running in the browser
-
-go to browser and copy ´ip_host:portExpose´
 
 
 ## Publish Image in DockerHub
 
-Enter to machine with Docker 
-
-```bash
-ssh <user@ip_host> -p <port>
-```
-
-Login in dockerhub 
-
-```bash
-docker login
-```
-
-Prepare image 
-
-```bash
-docker tag <image_name> <dockerHubUser/image_name>
-```
-
-Publish image in Docker Hub
-
-```bash
-docker push <dockerHubUser/image_name>
-```
-
+1. Enter to machine with Docker 
+     ```bash
+     #simple entering
+     $ ssh <user@ip_host> -p <port>
+     # entering to machine with port-forwarding for expose an port:
+     $ ssh <user@ip_host> -p <port> -L <portExpose:ip_host:portExpose>
+     ```
+2. Login in dockerhub 
+     ```bash
+     $ docker login
+     ```
+3. Prepare image 
+     ```bash
+     $ docker tag <image_name> <dockerhub_user/image_name:tag>
+     ```
+4. Publish image in Docker Hub
+     ```bash
+     $ docker push <dockerhub_user/image_name:tag>
+     ```
 To verificate the image publish in Docker Hub
-
-go to Docker Hub => https://hub.docker.com/
-
-
-# Execution for Webapp
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
-
-### Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-### Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-### Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-### Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-### Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-### Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+> go to Docker Hub => https://hub.docker.com/
 

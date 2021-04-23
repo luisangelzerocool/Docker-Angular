@@ -31,6 +31,7 @@
      $ ssh <user@ip_host> -p <port> -L <portExpose:ip_host:portExpose>
      ```
 5. Copy the web app into machine with docker
+
 6. create docker build with 
      ```bash 
      $ docker build . -t <user/image_name:tag>
